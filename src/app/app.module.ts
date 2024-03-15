@@ -10,10 +10,16 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent, NavigationBarComponent],
-  imports: [BrowserModule, AppRoutingModule, MatSlideToggleModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatSlideToggleModule,
+    MatIconModule,
+  ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
