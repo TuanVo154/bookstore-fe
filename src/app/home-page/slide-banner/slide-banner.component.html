@@ -1,0 +1,81 @@
+<div class="flex justify-center my-5">
+  <div class="w-2/3 mr-3">
+    <div class="carousel flex relative">
+      <div
+        *ngFor="let slide of slides; let i = index"
+        class="rounded-lg overflow-hidden hidden slide-img"
+        [ngClass]="{ '!block': currentSlideIndex === i }"
+        (mouseleave)="autoSlide()"
+        (mouseenter)="stopAutoSlide()"
+      >
+        <img
+          [src]="slide.imagePath"
+          [alt]="slide.name"
+          class="w-full h-[330px]"
+        />
+      </div>
+      <button
+        (click)="prevSlide()"
+        class="absolute top-0 -left-0 bottom-0 bg-white p-2 rounded-lg opacity-20 hover:opacity-30"
+      >
+        <mat-icon
+          class="material-symbols-outlined !w-4 !h-4 overflow-visible text-xl -rotate-90 mr-2"
+        >
+          arrow-left
+        </mat-icon>
+      </button>
+      <button
+        (click)="nextSlide()"
+        class="absolute top-0 right-0 bottom-0 bg-white p-2 rounded-lg opacity-20 hover:opacity-30"
+      >
+        <mat-icon
+          class="material-symbols-outlined !w-4 !h-4 overflow-visible text-xl rotate-90 ml-2"
+        >
+          arrow-right
+        </mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="w-1/3">
+    <div class="rounded-lg mb-3 overflow-hidden">
+      <img
+        src="../../../assets/slideBannerHomePage/392x156_sacombank_t3.jpg"
+        alt="Payment with Sacombank"
+        class="w-full"
+      />
+    </div>
+    <div class="rounded-lg overflow-hidden">
+      <img
+        src="../../../assets/slideBannerHomePage/392x156_zalopay_t3.jpg"
+        alt="Payment with Zalo pay"
+        class="w-full"
+      />
+    </div>
+  </div>
+</div>
+<div class="grid grid-cols-4 gap-3">
+  <div>
+    <img
+      src="../../../assets/slideBannerHomePage/Banner_Quatang_310x210.png"
+      alt=""
+    />
+  </div>
+  <div>
+    <img
+      src="../../../assets/slideBannerHomePage/Trangforeignbooks_0324_smallbanner_310x210.png"
+      alt=""
+    />
+  </div>
+  <div>
+    <img
+      src="../../../assets/slideBannerHomePage/MayTinh_SmallBanner_310x210.png"
+      alt=""
+    />
+  </div>
+  <div>
+    <img
+      src="../../../assets/slideBannerHomePage/NCCTanViet_T323_BannerSmallBanner_310x210.png"
+      alt=""
+    />
+  </div>
+</div>
