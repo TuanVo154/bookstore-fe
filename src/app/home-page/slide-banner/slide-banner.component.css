@@ -1,0 +1,15 @@
+.slide-img {
+  animation: slide-in-carousel 2s ease;
+}
+
+@keyframes slide-in-carousel {
+  from {
+    opacity: 0;
+    transform: translateX(320px);
+  }
+
+  to {
+    opacity: 0.9;
+    transform: translateX(0);
+  }
+}

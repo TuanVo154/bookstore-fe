@@ -1,5 +1,5 @@
-<div class="w-full bg-[#EAE7DC]">
-  <div class="w-full flex justify-center items-center">
+<div class="w-full bg-[#F9EFDB] z-[100] relative">
+  <div class="w-full flex justify-center items-center flex-col">
     <nav class="w-[1200px] h-28 flex justify-between items-center">
       <div class="logo flex items-center justify-center cursor-pointer">
         <a href="../app.component.html" class="">
@@ -40,20 +40,38 @@
         </div>
       </div>
       <div class="ctr">
-        <ul class="flex items-center gap-x-8 w-full">
-          <li class="flex flex-col items-center justify-center cursor-pointer">
+        <ul class="flex items-center gap-x-6 w-full">
+          <li
+            class="flex flex-col items-center justify-center cursor-pointer relative transition-transform hover:scale-110 p-3"
+            (mouseenter)="onModelCategories()"
+            (mouseleave)="onMouseLeaveModelCategories()"
+          >
+            <mat-icon
+              class="material-symbols-outlined !h-7 !w-7 !overflow-visible text-3xl"
+              >category</mat-icon
+            >
+          </li>
+          <li
+            class="flex flex-col items-center justify-center cursor-pointer transition-transform hover:scale-110 p-3"
+          >
             <mat-icon
               class="material-symbols-outlined !h-7 !w-7 !overflow-visible text-3xl"
               >notifications</mat-icon
             >
           </li>
-          <li class="flex flex-col items-center justify-center cursor-pointer">
+          <li
+            class="flex flex-col items-center justify-center cursor-pointer transition-transform hover:scale-110 p-3"
+          >
             <mat-icon
               class="material-symbols-outlined !h-7 !w-7 !overflow-visible text-3xl"
               >shopping_cart</mat-icon
             >
           </li>
-          <li class="flex flex-col items-center justify-center cursor-pointer">
+          <li
+            class="flex flex-col items-center justify-center cursor-pointer transition-transform hover:scale-110 p-3"
+            (mouseenter)="onModelSignIn()"
+            (mouseleave)="onMouseLeaveModelSignIn()"
+          >
             <mat-icon
               class="material-symbols-outlined !h-7 !w-7 !overflow-visible text-3xl"
               >person</mat-icon
@@ -64,3 +82,12 @@
     </nav>
   </div>
 </div>
+<app-model-menu
+  class="fixed hidden top-0 right-0 left-0 bottom-0 z-99"
+  [ngClass]="{ '!block': isModelCategoriesVisible === false }"
+></app-model-menu>
+
+<app-model-login-signup
+  class="fixed hidden top-0 right-0 left-0 bottom-0 z-99"
+  [ngClass]="{ '!block': isModelSignInVisible === false }"
+></app-model-login-signup>

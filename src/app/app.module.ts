@@ -11,9 +11,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ModelMenuComponent } from './navigation-bar/model/model-menu.component';
+import { ModelLoginSignupComponent } from './navigation-bar/model-login-signup/model-login-signup.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { SlideBannerComponent } from './home-page/slide-banner/slide-banner.component';
 
 @NgModule({
-  declarations: [AppComponent, NavigationBarComponent],
+  declarations: [AppComponent, NavigationBarComponent, ModelMenuComponent, ModelLoginSignupComponent, HomePageComponent, SlideBannerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
