@@ -2,7 +2,7 @@
   <div class="w-full flex justify-center items-center flex-col">
     <nav class="w-[1200px] h-28 flex justify-between items-center">
       <div class="logo flex items-center justify-center cursor-pointer">
-        <a [routerLink]="['/index']">
+        <a routerLink="/" routerLinkActive="active">
           <img
             src="../../assets/logo-after-remove-bg.png"
             alt="Tiệm sách trong hẻm"
@@ -85,11 +85,11 @@
   </div>
 </div>
 <app-modal-menu
-  class="fixed hidden top-0 right-0 left-0 bottom-0 z-99"
+  class="fixed hidden top-0 right-0 left-0 bottom-0 z-99 hover:block"
   [ngClass]="{ '!block': isModelCategoriesVisible === false }"
 ></app-modal-menu>
 
 <app-modal-login-signup
-  class="fixed hidden top-0 right-0 left-0 bottom-0 z-99"
+  class="fixed hidden top-0 right-0 left-0 bottom-0 z-99 hover:block"
   [ngClass]="{ '!block': isModelSignInVisible === false }"
 ></app-modal-login-signup>
