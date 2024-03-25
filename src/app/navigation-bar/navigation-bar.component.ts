@@ -11,7 +11,6 @@ export class NavigationBarComponent {
 
   onModelSignIn() {
     this.isModelSignInVisible = false;
-    console.log(this.isModelSignInVisible);
   }
 
   onModelCategories() {
@@ -19,10 +18,14 @@ export class NavigationBarComponent {
   }
 
   onMouseLeaveModelSignIn() {
-    this.isModelSignInVisible = true;
+    setTimeout(() => {
+      this.isModelSignInVisible = true;
+    }, 2000);
   }
 
   onMouseLeaveModelCategories() {
-    this.isModelCategoriesVisible = true;
+    setTimeout(() => {
+      this.isModelCategoriesVisible = true;
+    }, 2000);
   }
 }
