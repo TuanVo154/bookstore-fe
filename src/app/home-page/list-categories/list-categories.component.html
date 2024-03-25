@@ -1,0 +1,24 @@
+<div class="w-[1200px] bg-white mt-8 rounded-lg px-6 py-4">
+  <div
+    class="flex justify-start items-center pb-4 after:[ border-b border-solid border-gray-500]"
+  >
+    <mat-icon
+      class="material-symbols-outlined text-[#e85a4f] !h-8 !w-8 text-3xl"
+    >
+      category
+    </mat-icon>
+    <span class="ml-2 font-semibold text-xl">Danh mục sản phẩm</span>
+  </div>
+  <div class="grid grid-cols-9 gap-5 py-5">
+    <a class="cursor-pointer" *ngFor="let category of categories">
+      <img
+        class="w-full object-cover"
+        [src]="category.imagePath"
+        [alt]="category.name"
+      />
+      <span class="mt-2 block w-full text-center text-[#646464]">{{
+        category.title
+      }}</span>
+    </a>
+  </div>
+</div>
