@@ -19,10 +19,11 @@ import { SlideBannerComponent } from './home-page/slide-banner/slide-banner.comp
 import { ListCategoriesComponent } from './home-page/list-categories/list-categories.component';
 import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RecommendBookComponent } from './home-page/recommend-book/recommend-book.component';
 
 const appRouter: Routes = [
   {
-    path: 'index',
+    path: '',
     component: HomePageComponent,
   },
   {
@@ -42,6 +43,7 @@ const appRouter: Routes = [
     ListCategoriesComponent,
     SignupComponent,
     PageNotFoundComponent,
+    RecommendBookComponent,
   ],
   imports: [
     BrowserModule,

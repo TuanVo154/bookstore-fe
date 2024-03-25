@@ -18,14 +18,10 @@ export class NavigationBarComponent {
   }
 
   onMouseLeaveModelSignIn() {
-    setTimeout(() => {
-      this.isModelSignInVisible = true;
-    }, 2000);
+    this.isModelSignInVisible = true;
   }
 
   onMouseLeaveModelCategories() {
-    setTimeout(() => {
-      this.isModelCategoriesVisible = true;
-    }, 2000);
+    this.isModelCategoriesVisible = true;
   }
 }
