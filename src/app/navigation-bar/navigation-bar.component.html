@@ -1,4 +1,7 @@
-<div class="w-full bg-[#F9EFDB] z-[100] relative">
+<div
+  class="w-full bg-[#F9EFDB] z-[100] relative"
+  [ngClass]="{ '!hidden': showNavigation === false }"
+>
   <div class="w-full flex justify-center items-center flex-col">
     <nav class="w-[1200px] h-28 flex justify-between items-center">
       <div class="logo flex items-center justify-center cursor-pointer">
@@ -83,13 +86,13 @@
       </div>
     </nav>
   </div>
-</div>
-<app-modal-menu
-  class="fixed hidden top-0 right-0 left-0 bottom-0 z-99 hover:block"
-  [ngClass]="{ '!block': isModelCategoriesVisible === false }"
-></app-modal-menu>
+  <app-modal-menu
+    class="fixed hidden top-0 right-0 left-0 bottom-0 z-99 hover:block"
+    [ngClass]="{ '!block': isModelCategoriesVisible === false }"
+  ></app-modal-menu>
 
-<app-modal-login-signup
-  class="fixed hidden top-0 right-0 left-0 bottom-0 z-99 hover:block"
-  [ngClass]="{ '!block': isModelSignInVisible === false }"
-></app-modal-login-signup>
+  <app-modal-login-signup
+    class="fixed hidden top-0 right-0 left-0 bottom-0 z-99 hover:block"
+    [ngClass]="{ '!block': isModelSignInVisible === false }"
+  ></app-modal-login-signup>
+</div>
